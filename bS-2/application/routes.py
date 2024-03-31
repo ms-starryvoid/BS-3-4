@@ -10,7 +10,7 @@ def home():
 @app.route('/api/log',methods=["POST","GET"])
 def log():
     data=request.json
-    print(data)
+    #print(data)
     #data = msgpack.loads(data)
     length = data['data']['len']
     description = np.array(data['data']['descrip'])
