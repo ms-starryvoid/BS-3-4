@@ -13,7 +13,7 @@ def log():
     print(data)
     #data = msgpack.loads(data)
     length = data['data']['len']
-    description = data['data']['descrip']
+    description = np.array(data['data']['descrip'])
     user_id = data['data']['user_id']
     query = {"user_id": user_id}
     result = db.fing1.find_one(query) #insert correct db give connectio .env diferently
